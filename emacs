@@ -1,13 +1,15 @@
-
+;; Establece Command como M-
 (setq mac-option-modifier nil
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
+;; org-mode configuration
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;; melpa repository
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -44,20 +46,21 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  )
 
+;; PATH OSX
 (setq exec-path (cons "/usr/local/bin" exec-path))
 
-;;(setq ess-use-toolbar t)
-;;(require 'ess-toolbar)
-
-
+;; ESS en org-mode
 (require 'ess-site)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((R . t)))
 
+;; PATH R 
 (setq org-babel-R-command "/usr/local/bin/R --slave --no-save")
 
+;; Mostras numero filas
 (global-display-line-numbers-mode)
 
+;; Establece tema personalizado
 (load-theme 'monokai)
