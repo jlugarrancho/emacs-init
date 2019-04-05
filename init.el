@@ -28,6 +28,8 @@ There are two things you can do about this warning:
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
+
+;; custom themes
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -49,7 +51,7 @@ There are two things you can do about this warning:
 ;; PATH OSX
 (setq exec-path (cons "/usr/local/bin" exec-path))
 
-;; ESS en org-mode
+;; ESS load
 (require 'ess-site)
 
 (org-babel-do-load-languages
@@ -64,3 +66,12 @@ There are two things you can do about this warning:
 
 ;; Establece tema personalizado
 (load-theme 'monokai)
+
+;; Muestra siempre la posicion del cursor en la  columna
+(column-number-mode 1)
+
+;; Establece 80 como num de caracteres maximos en columna en text-mode
+(setq-default fill-column 80)
+
+;; Tamaña pantalla al abrir 85 columnas 35 filas 
+(when window-system (set-frame-size (selected-frame) 90 35))
