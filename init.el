@@ -40,7 +40,8 @@ There are two things you can do about this warning:
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "274fa62b00d732d093fc3f120aca1b31a6bb484492f31081c1814a858e25c72e" default)))
  '(package-selected-packages
    (quote
-    (auctex latex-preview-pane cyberpunk-theme zenburn-theme sunburn-theme solarized-theme spacemacs-theme dracula-theme ess markdown-mode))))
+    (racket-mode auctex latex-preview-pane cyberpunk-theme zenburn-theme sunburn-theme solarized-theme spacemacs-theme dracula-theme ess markdown-mode)))
+ '(preview-orientation (quote below)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -79,3 +80,6 @@ There are two things you can do about this warning:
 ;; Latex PATH en macOS 
 (setenv "PATH" (concat (getenv "PATH") ":/Library/TeX/texbin/"))  
 (setq exec-path (append exec-path '("/Library/TeX/texbin/")))
+
+;; Path racket-mode REPL
+(setq racket-program "/Applications/Racket v7.2/bin/racket")
